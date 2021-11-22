@@ -66,5 +66,4 @@ const createQuestions = ()=>{
 
 const hidePre = ()=>{
     container.style.opacity = '0';
-
 }
