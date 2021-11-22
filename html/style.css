@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #ccc;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    transition: opacity 1.9s;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(16, 46, 77);
+    width: 100%;
+    height: max-content;
+    background: white;
+}
+
+.welcome_img{
+    width: 700px;
+    height: 400px;
+
+}
+
+.welcome_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 2px;
+    color: rgb(19, 54, 90);
+}
+
+.para{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.go_Section{
+    width: 100%;
+    text-align: center;
+    background: rgb(19, 54, 90);
+    color: #fff;
+    padding: 20px;
+}
+
+#start_btn{
+    padding: 7px;
+    background: #ccc;
+    color: rgb(7, 26, 44);
+    font-size: 15px;
+    transition: all 1s;
+    cursor: pointer;
+
+}
+
+#start_btn:hover{
+    background: #fff;
+    color: rgb(70, 104, 20);
+    padding: 9px;
+}
