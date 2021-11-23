@@ -79,3 +79,52 @@ body{
     color: rgb(70, 104, 20);
     padding: 9px;
 }
+
+
+/*Dynamic section style*/
+
+.questions_container{
+    width: 100%;
+    height: max-content;
+    padding: 10px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+}
+
+.que_section{
+    display: flex;
+    flex-direction: column;
+    background: rgb(18, 64, 110);
+    margin: 1px 0px;
+    padding: 8px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   /*eje y*/
+}
+
+.que_title{
+    text-transform: uppercase;
+   font-size: 20px;
+   font-weight: bold;
+   order: -1;
+}
+
+.options{
+    order: 1;
+    margin: 5px 0px;
+    text-transform: uppercase;
+}
+
+.res_user{
+    order: 2;
+    width: 120px;
+    padding: 8px;
+    background: #ccc;
+    margin: 4px 0px;
+    text-transform: uppercase;
+}
