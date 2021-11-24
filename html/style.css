@@ -89,9 +89,12 @@ body{
     padding: 10px;
     background: white;
     display: flex;
+    visibility: hidden;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: left;
+    position: relative;
+    transition: all 2s;
 }
 
 .que_section{
@@ -127,4 +130,16 @@ body{
     background: #ccc;
     margin: 4px 0px;
     text-transform: uppercase;
+}
+
+.stopWatch{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 90px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    background: #000;
 }

@@ -5,11 +5,15 @@ const container = document.querySelector('.container');
 const queContainer = document.querySelector(".questions_container")
 let fragment = document.createDocumentFragment();
 let points = 0
+const stopWatch = document.querySelector('.stopWatch')
 
 startBtn.addEventListener('click',(e)=>{
     hidePre()
-    createQuestions()
-    searchQuestion(preguntas)
+    setTimeout(() => {
+        createQuestions()
+        searchQuestion(preguntas)   
+        Watch()
+    }, 1000);
     //createElements()
 })
 
@@ -84,18 +88,21 @@ const searchQuestion = (data)=>{
          addClasses(h2,'que_title')
          addClasses(div,'que_section')
          addClasses(resUer,"res_user")
+         
          h2.innerText = dat[1][0]
          creAndSerOptions(dat[1][2],div)
          div.appendChild(h2);
          div.appendChild(resUer)
          fragment.appendChild(div)
          queContainer.appendChild(fragment)
+         queContainer.style.visibility = 'visible'
         })
 
         return datos
     }
 
 const creAndSerOptions = (dat,div)=>{
+    stopWatch.style.display = 'flex'
     dat.forEach(el =>{
         let option = document.createElement('option')
         addClasses(option,"options")
@@ -125,3 +132,42 @@ const hidePre = ()=>{
         container.style.display = 'none'  
     }, 1000);
 }
+
+
+/*let stopTimer = false
+
+const Watch = ()=>{
+    let min = 0;
+    let sec = 0;
+
+    while (stopTimer === false) {  
+
+        const watch = setInterval(() => {
+            sec++;
+            console.log(sec);
+
+            if (sec === 60) {
+                min++;
+                console.log(min);
+                sec = 0;
+            }
+
+            if (min === 2) {
+                stopTimer = true;
+            }
+
+            let stringSecond = sec.toString()
+            stopWatch.innerText = stringSecond
+            
+        }, 1000);
+        console.log(watch)
+    }  
+
+}*/
+
+
+
+
+
+
+
